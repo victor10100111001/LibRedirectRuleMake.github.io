@@ -1,0 +1,180 @@
+#icon{
+    width: 120px;
+    height: 120px;
+    vertical-align:middle;
+}
+
+#title{
+    vertical-align:middle;
+    display:inline;
+    color: white;
+    font-size: 50px;
+}
+#main{
+    width: 75%;
+    margin-left: 12.5%;
+    height: auto;
+    border: solid rgba(251,192,22,255);
+    border-radius: 20px;
+    
+}
+
+#titleblock{
+    text-align: center;
+    margin-top: 50px;
+}
+
+body{
+    background-color: black;
+}
+
+#footer{
+    color: white;
+    margin-bottom: auto;
+    text-align: center;
+}
+#text{
+    color: white;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.hovertext {
+    position: relative;
+    border-bottom: 1px dotted black;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  .hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color: black;
+    border: solid rgba(251,192,22,255) 2px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 0.5s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+  }
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+.protocol{
+    color: white;
+}
+.customizetitle{
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+}
+/* #downloadbutton{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 100px;
+
+}
+
+#download{
+    width: 150px;
+    height: 60px;
+    background-color: grey;
+    border: solid grey;
+    border-radius: 5px;
+    padding: 0px;
+    margin-left: 400px;
+    font-size: x-large;
+
+    
+    
+}
+
+#download > p{
+    /* margin-bottom: 100px;
+    margin-left: 50px; */
+    /* text-align: center;
+    vertical-align: middle;
+
+} */ */
+#size{
+    font-size: large;
+    margin-top: 0px;
+}
+/* #download > p{
+    color: white;
+} */
+
+hr{
+    color: rgba(251,192,22,255);
+    
+}
+
+#rulesdownload{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+}
+
+button {
+    --color: rgba(251,192,22,255);
+    font-family: inherit;
+    
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: black;
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+    margin-left: 425px;
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }

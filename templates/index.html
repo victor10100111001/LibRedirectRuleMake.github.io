@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibRedirect Rule Maker</title>
+    <link rel="icon" href="{{ url_for('static', filename='/icon.svg') }}" type="image/icon type">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles.css') }}">
+</head>
+<body>
+    <div id="main">
+        <div id="titleblock">
+            <img src="{{ url_for('static', filename='/icon.svg') }}" id="icon" alt="LibRedirect icon">
+            <h1 id="title">LibRedirect Rule Maker</h1>
+        </div>
+        <div id="text">
+            <h3>What can this tool do?</h3>
+            <p>This tool allows you to easily make uBlock Origin rules for all of the instances in LibRedirect. You can choose what type of <span class="hovertext" data-hover="Clearnet, Tor, I2p or Loki">protocol</span> and what type of <span class="hovertext" data-hover="JavaScript, Cosmetic Filtering or Remote Fonts">content</span> you would like to block on those websites</p>
+            <h3>Why should I do this?</h3>
+            <p>Disabling JavaScript, Cosmetic Filtering and Remote Fonts can greatly improve your privacy and security. JavaScript is for example often used to <a href="https://www.washingtonpost.com/technology/2019/10/31/think-youre-anonymous-online-third-popular-websites-are-fingerprinting-you/">fingerprint</a> your webbrowser or perform 0-day exloits. You can see your own browser fingerprint on <a href="amiunique.org">amiunique.org</amiunique></a> or <a href="https://coveryourtracks.eff.org/">coveryourtracks.eff.org</a>.</p>
+            <h3>How do I import the rules in uBlock Origin</h3>
+            <p>First press the uBlock Origin extension icon and then the three gears in the bottom right corner. Inside the dashboard choose "My rules" and then click "Import from file". Choose the file that you have downloaded and press "commit" to make the rules permanent.</p>
+        </div>
+        <section id="customizer">
+            <br>
+            <h3 id="rulesdownload">Download your rules for uBlock Origin</h3>
+            <details>
+                <summary class="customizetitle" id="size">Customize your rules instead of using default values</summary>
+
+                <form action="{{ url_for('gfg')}}" method="post" class="form" id="form1">
+                    <h3 class="customizetitle">Choose your protocol</h3>
+                    <label for="clearnet" class="protocol">
+                        <input name="protocol" type="radio" value="normal" id="clearnet" checked>
+                        Clearnet
+                    </label>
+                    <label for="tor" class="protocol">
+                        <input name="protocol" type="radio" value="tor" id="tor">
+                        Tor
+                    </label>
+                    <label for="i2p" class="protocol">
+                        <input name="protocol" type="radio" value="i2p" id="i2p">
+                        I2p
+                    </label>
+                    <label for="loki" class="protocol">
+                        <input name="protocol" type="radio" value="loki" id="loki">
+                        Loki
+                    </label>
+                    <br>
+                    <h3 class="customizetitle">Choose what you want to block</h3>
+                    <label for="JavaScript" class="protocol">
+                        <input name="block" type="checkbox" value="javascript" id="JavaScript" checked>
+                        JavaScript
+                    </label>
+                    <label for="Cosmetic Filtering" class="protocol">
+                        <input name="block1" type="checkbox" value="cosmeticfiltering" id="Cosmetic Filtering">
+                        Cosmetic Filtering
+                    </label>
+                    <label for="Remote Fonts" class="protocol">
+                        <input name="block2" type="checkbox" value="remotefonts" id="Remote Fonts">
+                        Remote Fonts
+                    </label>
+                </form>     
+            </details>
+            <br>
+            <br>
+            <button id="download" form="form1" type="submit"> 
+                <!-- <img id="downloadbutton" src="/static/Download.PNG" alt="Download button"> -->
+                Download
+            </button>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br> 
+        <footer id="footer"><p> <a href="https://github.com/victor10100111001" target="_blank">My Github</a>  | <a href="https://github.com/libredirect/libredirect" target="_blank">LibRedirect</a> | <a href="https://github.com/horhill/uBlock" target="_blank">uBlock Origin</a></p></footer>
+    </div>
+
+</body>
+</html>
